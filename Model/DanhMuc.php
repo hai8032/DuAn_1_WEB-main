@@ -29,4 +29,11 @@ class DanhMuc{
         $stmt = $this->conn->prepare($sql);
         $stmt->execute();
     }
+    public function find_one($id)
+    {
+        $sql = "SELECT * FROM danhmuc WHERE id=$id";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->execute();
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
 }

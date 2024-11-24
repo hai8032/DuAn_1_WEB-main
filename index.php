@@ -13,5 +13,9 @@ $ctl = $_GET['ctl'] ?? "";
 
 match ($ctl) {
    "" => (new DanhMucController)->list(),
+   "delete" => (new DanhMucController)->delete(),
+   "add" => (new DanhMucController)-> add(),
+   "store" => (new DanhMucController)->store(),
+   "edit" => (new DanhMucController) ->edit(),
 
 };
